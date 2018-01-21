@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Online News Portal</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+
+      $("document").ready(function(){
+
+            $("img").mouseenter(function(){
+                      $(this).toggleClass("w3-container w3-center w3-animate-top");
+            });
+
+           
+                 
+
+      });
+  
+    
+        
+  </script>
+<style>
+   img{
+      width: 600px;
+      height: 400px;
+
+}
+.center{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 50px;
+
+}
+body{
+ 
+
+}
+.top{
+  width: 100%;
+  height: 80px;
+  background: red;
+}
+</style>
+
+</head>
+
+<body>
+
+    <div class="top">
+
+      
+
+    </div>
+  <nav class=" navbar navbar-dark bg-black">
+
+   
+
+    
+    <ul class="nav navbar-nav navbar-right">
+
+    <li> <a href="./cricket">WEATHER REPORT</a></li>
+    <li> <a href="./cricket">CRICKET</a></li>
+    <li> <a href="./buisness">BUISNESS</a></li>
+
+    <li> <a href="./sport">SPORTS</a></li>
+
+    <li> <a href="./world">WORLD</a></li>
+
+    <li> <a href="./entertainment">ENTERTAINMENT</a></li>
+
+    <li> <a href="./politics">INDIAN POLITICS</a></li>
+
+       <li> <a href="./tech">TECH</a></li>
+
+    </ul>
+    
+  </nav>
+ <div class="ui sidebar inverted vertical menu">
+    <a class="item">
+      1
+    </a>
+    <a class="item">
+      2
+    </a>
+    <a class="item">
+      3
+    </a>
+  </div>
+  <div class="pusher">
+    <!-- Site content !-->
+  </div>                  
+          <%  data["articles"].forEach(function(news){   %>
+                    <div class="center">
+              <div class="ui centered card">
+                <div class="image">
+                  <img src="<%=news.urlToImage%>" alt="">
+                </div>
+
+                <div class="content">
+                 <h1> <a href="/news/:<%=news.description%>" class="header"><strong><%= news.title %></strong></a></h1>
+               </div>
+                
+              </div>
+            </div>
+
+
+  <% }); %>
+ 
+  
+</body>
+
+</html>
