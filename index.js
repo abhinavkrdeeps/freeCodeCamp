@@ -8,6 +8,7 @@ app.set("view engine", "ejs");
 var data;
 app.get("/",function(req,res)
 {
+	console.log("The escape sequence \// inserts a backslash in a string.");
 
 	res.render("show");
 
